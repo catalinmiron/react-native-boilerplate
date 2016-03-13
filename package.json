@@ -1,6 +1,6 @@
 {
   "name": "RNBoilerplate",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "scripts": {
     "remotedev": "remotedev-debugger --hostname localhost --port 5678 --runserver",
     "start": "node node_modules/react-native/local-cli/cli.js start",
@@ -20,7 +20,7 @@
     "react-native": "^0.21.0",
     "react-redux": "^4.4.0",
     "redux": "^3.3.1",
-    "redux-thunk": "^1.0.3"
+    "redux-thunk": "^2.0.1"
   },
   "devDependencies": {
     "babel-cli": "^6.5.1",
@@ -36,7 +36,6 @@
     "fbjs-scripts": "^0.5.0",
     "isparta": "^4.0.0",
     "mocha": "^2.4.5",
-    "mockery": "^1.4.0",
     "node-fetch": "^1.3.3",
     "proxyquire": "^1.7.4",
     "react": "0.14.7",
