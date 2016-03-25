@@ -6,7 +6,10 @@ import reducer from './reducers';
 const middlewares = [thunk];
 
 let enhancer;
-if (typeof __DEV__ !== 'undefined' && __DEV__) {
+if (__DEV__) {
+  const installDevTools = require('immutable-devtools').default;
+  installDevTools(Immutable);
+
   const devTools = require('remote-redux-devtools');
   enhancer = compose(
     applyMiddleware(...middlewares),
@@ -21,5 +24,11 @@ if (typeof __DEV__ !== 'undefined' && __DEV__) {
 }
 
 export default function configureStore(initialState) {
-  return createStore(reducer, initialState, enhancer);
+  const store = createStore(reducer, initialState, enhancer);
+  if (module.hot) {
+    module.hot.accept(() => {
+      store.replaceReducer(require('./reducers'));
+    });
+  }
+  return store;
 }
