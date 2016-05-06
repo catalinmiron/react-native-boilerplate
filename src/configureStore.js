@@ -1,3 +1,6 @@
+/* eslint global-require: 0 */
+
+import Immutable from 'immutable';
 import { Platform } from 'react-native';
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
@@ -7,7 +10,7 @@ const middlewares = [thunk];
 
 let enhancer;
 if (__DEV__) {
-  const installDevTools = require('immutable-devtools').default;
+  const installDevTools = require('immutable-devtools');
   installDevTools(Immutable);
 
   const devTools = require('remote-redux-devtools');

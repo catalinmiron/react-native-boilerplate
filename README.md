@@ -1,6 +1,13 @@
 # React Native Boilerplate [![Build Status](https://travis-ci.org/jhen0409/react-native-boilerplate.svg)](https://travis-ci.org/jhen0409/react-native-boilerplate) [![Dependency Status](https://david-dm.org/jhen0409/react-native-boilerplate.svg)](https://david-dm.org/jhen0409/react-native-boilerplate) [![devDependency Status](https://david-dm.org/jhen0409/react-native-boilerplate/dev-status.svg)](https://david-dm.org/jhen0409/react-native-boilerplate#info=devDependencies)
 
-The React Native, Redux boilerplate for personal usage.
+> The React Native, Redux boilerplate for personal usage
+
+## Included
+
+* [React](https://github.com/facebook/react) & [React Native](https://github.com/facebook/react-native) v0.25
+* [Redux](https://github.com/reactjs/redux) & [Remote Redux DevTools](https://github.com/zalmoxisus/remote-redux-devtools) & [On Debugger](https://github.com/jhen0409/remote-redux-devtools-on-debugger)
+* [Immutable](https://github.com/facebook/immutable-js) & [Immutable DevTools](https://github.com/andrewdavey/immutable-devtools)
+* [Babel](https://github.com/babel/babel) & Plugins: [transform-decorators-legacy](https://github.com/loganfsmyth/babel-plugin-transform-decorators-legacy)
 
 ## Installation
 
@@ -10,6 +17,8 @@ See [Getting Started](https://facebook.github.io/react-native/docs/getting-start
 $ npm install -g react-native-cli
 $ npm install
 ```
+
+Also, you can use [generator-rnb](https://github.com/jhen0409/generator-rnb) to create project with this boilerplate.
 
 ## Development
 
@@ -47,17 +56,11 @@ __*[Emulator only]*__ If you're still use Android 4.0, it will cannot use `adb r
 
 ## Test
 
-We used `react-native-web` to mock `react-native` most components, and test with `mocha`, `enzyme`.
+We used [react-native-mock](https://github.com/lelandrichardson/react-native-mock), and test with [Mocha](https://github.com/mochajs/mocha), [Enzyme](https://github.com/airbnb/enzyme).
 
 ```bash
 $ npm test
 ```
-
-## Use this to create new project
-
-* Run `npm run newproject` command
-* Type your project name
-* It will be replaced all `RNboilerplate`, `rnboilerplate` words with your project name
 
 ## Credits
 

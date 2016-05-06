@@ -1,11 +1,9 @@
 import sinon from 'sinon';
 import { expect } from 'chai';
 import { shallow } from 'enzyme';
-import React, {
-  Text,
-  View,
-  TouchableHighlight
-} from 'react-native';
+import Immutable from 'immutable';
+import React from 'react';
+import { Text, View, TouchableHighlight } from 'react-native';
 import Counter from '../../src/components/Counter';
 
 const props = {
@@ -16,7 +14,6 @@ const props = {
   incrementAsync: sinon.spy()
 };
 
-/* eslint no-unused-expressions: 0 */
 describe('components <Counter />', function () {
   this.timeout(5000);
 
